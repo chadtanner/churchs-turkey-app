@@ -369,7 +369,7 @@ function ReservationForm({
                 // Create reservation
                 const reservationData = {
                     confirmationId: `CTX-${Date.now()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
-                    restaurantNumber: restaurant.restaurantNumber,
+                    locationId: restaurant.locationId,
                     restaurantName: restaurant.restaurantName,
                     restaurantAddress: `${restaurant.address.street}, ${restaurant.address.city}, ${restaurant.address.state} ${restaurant.address.zipCode}`,
                     customer: {

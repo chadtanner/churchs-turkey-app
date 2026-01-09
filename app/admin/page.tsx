@@ -65,6 +65,7 @@ export default function AdminDashboard() {
     });
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'performance' | 'reservations'>('performance');
+    const [reservationSearchTerm, setReservationSearchTerm] = useState('');
 
     useEffect(() => {
         async function fetchRestaurants() {
@@ -87,6 +88,11 @@ export default function AdminDashboard() {
 
         fetchRestaurants();
     }, []);
+
+    const handleSeeReservations = (locationId: string) => {
+        setReservationSearchTerm(locationId);
+        setActiveTab('reservations');
+    };
 
     if (loading) {
         return (
@@ -158,9 +164,13 @@ export default function AdminDashboard() {
 
                 {/* Tab Content */}
                 {activeTab === 'performance' ? (
-                    <PerformanceView restaurants={restaurants} categorized={categorized} />
+                    <PerformanceView
+                        restaurants={restaurants}
+                        categorized={categorized}
+                        onSeeReservations={handleSeeReservations}
+                    />
                 ) : (
-                    <ReservationsView />
+                    <ReservationsView initialSearchTerm={reservationSearchTerm} />
                 )}
             </div>
         </div>

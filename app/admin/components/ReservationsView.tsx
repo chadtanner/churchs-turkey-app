@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import Input from '@/components/ui/Input';
@@ -12,7 +12,7 @@ import { formatPickupDate } from '@/lib/utils';
 interface Reservation {
     id: string; // Firestore doc ID
     confirmationId: string;
-    restaurantNumber: string;
+    locationId: string;
     restaurantName: string;
     customer: {
         firstName: string;
@@ -28,21 +28,35 @@ interface Reservation {
     createdAt: any; // Timestamp
 }
 
-export default function ReservationsView() {
-    const [searchTerm, setSearchTerm] = useState('');
+interface ReservationsViewProps {
+    initialSearchTerm?: string;
+}
+
+export default function ReservationsView({ initialSearchTerm = '' }: ReservationsViewProps) {
+    const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
     const [searching, setSearching] = useState(false);
     const [reservations, setReservations] = useState<Reservation[]>([]);
     const [searched, setSearched] = useState(false);
 
-    const handleSearch = async () => {
-        if (!searchTerm.trim()) return;
+    // Effect to trigger search if initialSearchTerm is provided and changed
+    useEffect(() => {
+        if (initialSearchTerm) {
+            setSearchTerm(initialSearchTerm);
+            // We need to wait for state update or pass directly.
+            // Let's create a reusable search function that accepts a term
+            doSearch(initialSearchTerm);
+        }
+    }, [initialSearchTerm]);
+
+    const doSearch = async (term: string) => {
+        if (!term.trim()) return;
         setSearching(true);
         setSearched(true);
         setReservations([]);
 
         try {
             // Parse search term: split by comma, trim whitespace
-            const locationIds = searchTerm.split(',').map(s => s.trim()).filter(Boolean);
+            const locationIds = term.split(',').map(s => s.trim()).filter(Boolean);
 
             if (locationIds.length === 0) {
                 setSearching(false);
@@ -61,9 +75,8 @@ export default function ReservationsView() {
             for (const chunk of chunks) {
                 const q = query(
                     collection(db, 'reservations'),
-                    where('restaurantNumber', 'in', chunk),
-                    orderBy('restaurantNumber'), // Grouping sort
-                    orderBy('createdAt', 'desc') // Latest first
+                    where('locationId', 'in', chunk),
+                    orderBy('locationId') // Grouping sort (valid with where on same field)
                 );
 
                 const snapshot = await getDocs(q);
@@ -74,6 +87,18 @@ export default function ReservationsView() {
 
                 allReservations = [...allReservations, ...chunkData];
             }
+
+            // Client-side sort by restaurantNumber (grouping) then createdAt (desc)
+            // Note: Since we fetched chunks, sorting the combined array is safer.
+            allReservations.sort((a, b) => {
+                if (a.locationId !== b.locationId) {
+                    return a.locationId.localeCompare(b.locationId);
+                }
+                // Descending sort by date
+                const dateA = a.createdAt?.seconds ? new Date(a.createdAt.seconds * 1000) : new Date(a.createdAt);
+                const dateB = b.createdAt?.seconds ? new Date(b.createdAt.seconds * 1000) : new Date(b.createdAt);
+                return dateB.getTime() - dateA.getTime();
+            });
 
             setReservations(allReservations);
 
@@ -88,7 +113,7 @@ export default function ReservationsView() {
     // Group reservations by Location
     const groupedReservations: { [key: string]: Reservation[] } = {};
     reservations.forEach(res => {
-        const key = `${res.restaurantName} (#${res.restaurantNumber})`;
+        const key = `${res.restaurantName} (#${res.locationId})`;
         if (!groupedReservations[key]) {
             groupedReservations[key] = [];
         }
@@ -96,13 +121,13 @@ export default function ReservationsView() {
     });
 
     // CSV Export
-    const downloadCSV = () => {
-        if (reservations.length === 0) return;
+    const downloadCSV = (data: Reservation[] = reservations, filenameSuffix: string = 'all') => {
+        if (data.length === 0) return;
 
         const headers = ['Confirmation ID', 'Location ID', 'Location Name', 'Customer Name', 'Email', 'Phone', 'Qty', 'Pickup Date', 'Pickup Time'];
-        const rows = reservations.map(res => [
+        const rows = data.map(res => [
             res.confirmationId,
-            res.restaurantNumber,
+            res.locationId,
             `"${res.restaurantName}"`, // Quote incase of commas
             `"${res.customer.firstName} ${res.customer.lastName}"`,
             res.customer.email,
@@ -121,7 +146,7 @@ export default function ReservationsView() {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', `reservations_export_${new Date().toISOString().split('T')[0]}.csv`);
+        link.setAttribute('download', `reservations_${filenameSuffix}_${new Date().toISOString().split('T')[0]}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -138,12 +163,12 @@ export default function ReservationsView() {
                     <div style={{ flex: 1, minWidth: '200px' }}>
                         <Input
                             label="Location IDs (comma separated)"
-                            placeholder="e.g. 1001, 1002"
+                            placeholder="e.g. 100011, 100046"
                             value={searchTerm}
                             onChange={e => setSearchTerm(e.target.value)}
                         />
                     </div>
-                    <Button variant="primary" onClick={handleSearch} disabled={searching} style={{ height: '3rem', marginBottom: 'var(--spacing-4)' }}>
+                    <Button variant="primary" onClick={() => doSearch(searchTerm)} disabled={searching} style={{ height: '3rem', marginBottom: 'var(--spacing-4)' }}>
                         {searching ? 'Searching...' : 'Search Locations'}
                     </Button>
                 </div>
@@ -156,8 +181,8 @@ export default function ReservationsView() {
                         {reservations.length} Result{reservations.length !== 1 ? 's' : ''} Found
                     </h2>
                     {reservations.length > 0 && (
-                        <Button variant="secondary" onClick={downloadCSV}>
-                            ⬇ Export CSV
+                        <Button variant="secondary" onClick={() => downloadCSV(reservations, 'all')}>
+                            ⬇ Export All CSV
                         </Button>
                     )}
                 </div>
@@ -166,15 +191,26 @@ export default function ReservationsView() {
             {/* Grouped Lists */}
             {Object.entries(groupedReservations).map(([locationTitle, locationReservations]) => (
                 <div key={locationTitle} style={{ marginBottom: 'var(--spacing-8)' }}>
-                    <h4 className="text-h4" style={{
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
                         background: 'var(--gray-200)',
                         padding: 'var(--spacing-3) var(--spacing-4)',
                         borderRadius: 'var(--radius-sm)',
-                        color: 'var(--gray-900)',
                         marginBottom: 'var(--spacing-3)'
                     }}>
-                        {locationTitle} <span style={{ fontWeight: 400, color: 'var(--gray-600)' }}>({locationReservations.length} orders)</span>
-                    </h4>
+                        <h4 className="text-h4" style={{ color: 'var(--gray-900)', margin: 0 }}>
+                            {locationTitle} <span style={{ fontWeight: 400, color: 'var(--gray-600)' }}>({locationReservations.length} orders)</span>
+                        </h4>
+                        <Button
+                            variant="secondary"
+                            onClick={() => downloadCSV(locationReservations, locationReservations[0]?.locationId || 'location')}
+                            style={{ padding: '0.25rem 0.75rem', height: 'auto', fontSize: '0.875rem' }}
+                        >
+                            ⬇ Export CSV
+                        </Button>
+                    </div>
 
                     <div style={{ overflowX: 'auto' }}>
                         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>

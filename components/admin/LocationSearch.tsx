@@ -8,11 +8,13 @@ import Badge from '@/components/ui/Badge';
 interface AdminLocationSearchProps {
     restaurants: Restaurant[];
     onLocationSelect?: (restaurant: Restaurant) => void;
+    onSeeReservations?: (locationId: string) => void;
 }
 
 export default function AdminLocationSearch({
     restaurants,
-    onLocationSelect
+    onLocationSelect,
+    onSeeReservations
 }: AdminLocationSearchProps) {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<Restaurant[]>([]);
@@ -42,27 +44,33 @@ export default function AdminLocationSearch({
     };
 
     const getStatusBadge = (restaurant: Restaurant) => {
-        if (!restaurant.reservationsEnabled) {
-            return <Badge variant="neutral">⚫ Disabled</Badge>;
-        }
-        if (restaurant.turkeyInventory === 0) {
-            return <Badge variant="success">🟢 Sold Out</Badge>;
-        }
-
         const reserved = restaurant.metadata?.turkeysReserved || 0;
         const total = restaurant.metadata?.totalTurkeyCapacity || 12;
         const percentage = (reserved / total) * 100;
 
-        if (percentage >= 75) {
-            return <Badge variant="warning">🟠 {restaurant.turkeyInventory}/{total}</Badge>;
+        let badge;
+        if (restaurant.turkeyInventory === 0) {
+            badge = <Badge variant="success">🟢 Sold Out</Badge>;
+        } else if (percentage >= 75) {
+            badge = <Badge variant="warning">🟠 {restaurant.turkeyInventory}/{total}</Badge>;
+        } else if (percentage >= 50) {
+            badge = <Badge variant="attention">🟡 {restaurant.turkeyInventory}/{total}</Badge>;
+        } else if (percentage === 0) {
+            badge = <Badge variant="error">🔴 {restaurant.turkeyInventory}/{total}</Badge>;
+        } else {
+            badge = <Badge variant="info">🔵 {restaurant.turkeyInventory}/{total}</Badge>;
         }
-        if (percentage >= 50) {
-            return <Badge variant="attention">🟡 {restaurant.turkeyInventory}/{total}</Badge>;
+
+        if (!restaurant.reservationsEnabled) {
+            return (
+                <div style={{ display: 'flex', gap: 'var(--spacing-2)' }}>
+                    {badge}
+                    <Badge variant="neutral">⚫ Disabled</Badge>
+                </div>
+            );
         }
-        if (percentage === 0) {
-            return <Badge variant="error">🔴 {restaurant.turkeyInventory}/{total}</Badge>;
-        }
-        return <Badge variant="info">🔵 {restaurant.turkeyInventory}/{total}</Badge>;
+
+        return badge;
     };
 
     return (
@@ -223,6 +231,8 @@ export default function AdminLocationSearch({
 
                                         <div style={{
                                             display: 'flex',
+                                            flexWrap: 'wrap',
+                                            alignItems: 'center',
                                             gap: 'var(--spacing-4)',
                                             marginTop: 'var(--spacing-2)',
                                             fontSize: '0.75rem',
@@ -233,23 +243,35 @@ export default function AdminLocationSearch({
                                             <span>Price: ${restaurant.turkeyPrice.toFixed(2)}</span>
                                             <span>•</span>
                                             <span>Pickup: {restaurant.pickupDate}</span>
+
+                                            {onSeeReservations && (
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        onSeeReservations(restaurant.locationId);
+                                                    }}
+                                                    style={{
+                                                        marginLeft: 'auto',
+                                                        background: 'var(--gray-900)',
+                                                        color: 'white',
+                                                        border: 'none',
+                                                        borderRadius: 'var(--radius-sm)',
+                                                        padding: '0.25rem 0.75rem',
+                                                        fontSize: '0.75rem',
+                                                        fontWeight: 600,
+                                                        cursor: 'pointer',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: '4px'
+                                                    }}
+                                                >
+                                                    See Reservations →
+                                                </button>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
 
-                                {!restaurant.reservationsEnabled && (
-                                    <div style={{
-                                        marginTop: 'var(--spacing-2)',
-                                        padding: 'var(--spacing-2)',
-                                        background: '#FEE2E2',
-                                        border: '1px solid #FCA5A5',
-                                        borderRadius: 'var(--radius)',
-                                        fontSize: '0.875rem'
-                                    }}>
-                                        <span style={{ fontWeight: 500, color: '#991B1B' }}>Disabled:</span>
-                                        <span style={{ color: '#B91C1C' }}> {restaurant.disabledReason}</span>
-                                    </div>
-                                )}
                             </div>
                         ))}
                     </div>

@@ -8,9 +8,10 @@ import { formatPrice } from '@/lib/utils';
 interface PerformanceViewProps {
     restaurants: Restaurant[];
     categorized: CategorizedLocations;
+    onSeeReservations: (locationId: string) => void;
 }
 
-export default function PerformanceView({ restaurants, categorized }: PerformanceViewProps) {
+export default function PerformanceView({ restaurants, categorized, onSeeReservations }: PerformanceViewProps) {
     const totalTurkeys = restaurants.reduce((sum, r) => sum + (r.metadata?.totalTurkeyCapacity || 12), 0);
     const totalReserved = restaurants.reduce((sum, r) => sum + (r.metadata?.turkeysReserved || 0), 0);
     const totalAvailable = restaurants.reduce((sum, r) => sum + r.turkeyInventory, 0);
@@ -99,7 +100,7 @@ export default function PerformanceView({ restaurants, categorized }: Performanc
             </div>
 
             {/* Location Search */}
-            <AdminLocationSearch restaurants={restaurants} />
+            <AdminLocationSearch restaurants={restaurants} onSeeReservations={onSeeReservations} />
 
             {/* Inventory Status Panels */}
             <div>

@@ -25,8 +25,8 @@ export interface PickupConfig {
 }
 
 export interface Restaurant {
-    restaurantNumber: string;
-    locationId: string;
+    restaurantNumber: string; // Keeping for backward compat in JSON, but moving to locationId
+    locationId: string; // This is the new primary key
     restaurantName: string;
     address: Address;
     storeHours: StoreHours;
@@ -63,7 +63,7 @@ export interface ReservationDetails {
 export interface Reservation {
     id?: string;
     confirmationId: string;
-    restaurantNumber: string;
+    locationId: string; // Swapped from restaurantNumber
     restaurantName: string;
     restaurantAddress: string;
     customer: Customer;
