@@ -57,12 +57,12 @@ export default function AdminLocationSearch({
             return <Badge variant="warning">🟠 {restaurant.turkeyInventory}/{total}</Badge>;
         }
         if (percentage >= 50) {
-            return <Badge variant="info">🟡 {restaurant.turkeyInventory}/{total}</Badge>;
+            return <Badge variant="attention">🟡 {restaurant.turkeyInventory}/{total}</Badge>;
         }
         if (percentage === 0) {
             return <Badge variant="error">🔴 {restaurant.turkeyInventory}/{total}</Badge>;
         }
-        return <Badge variant="neutral">{restaurant.turkeyInventory}/{total}</Badge>;
+        return <Badge variant="info">🔵 {restaurant.turkeyInventory}/{total}</Badge>;
     };
 
     return (

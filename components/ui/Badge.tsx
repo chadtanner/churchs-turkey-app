@@ -2,7 +2,7 @@ import React from 'react';
 
 interface BadgeProps {
     children: React.ReactNode;
-    variant?: 'success' | 'error' | 'warning' | 'info' | 'neutral';
+    variant?: 'success' | 'error' | 'warning' | 'info' | 'neutral' | 'attention';
 }
 
 export default function Badge({ children, variant = 'neutral' }: BadgeProps) {

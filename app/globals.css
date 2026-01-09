@@ -32,14 +32,14 @@ a {
   --honey-butter: #F4A525;
   --og-heat: #9A3324;
   --mayo: #FFFFFF;
-  
+
   /* Secondary Colors */
   --jalapeno: #546223;
   --h2o: #3A5382;
   --signature-hot-sauce: #D76B00;
   --gravy: #C6893F;
   --paprika: #D14124;
-  
+
   /* Neutral Grays */
   --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
@@ -51,13 +51,13 @@ a {
   --gray-700: #374151;
   --gray-800: #1F2937;
   --gray-900: #111827;
-  
+
   /* Semantic Colors */
   --success: var(--jalapeno);
   --error: var(--og-heat);
   --warning: var(--signature-hot-sauce);
   --info: var(--h2o);
-  
+
   /* Spacing */
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -71,7 +71,7 @@ a {
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
-  
+
   /* Border Radius */
   --radius-sm: 0.25rem;
   --radius: 0.5rem;
@@ -328,6 +328,11 @@ a {
   color: var(--gray-700);
 }
 
+.badge-attention {
+  background: rgba(244, 165, 37, 0.1);
+  color: #B47200;
+}
+
 /* Utility Classes */
 .section-spacing {
   padding-top: var(--spacing-16);
@@ -339,20 +344,20 @@ a {
   .text-display {
     font-size: 2.5rem;
   }
-  
+
   .text-h1 {
     font-size: 2rem;
   }
-  
+
   .text-h2 {
     font-size: 1.5rem;
   }
-  
+
   .container {
     padding-left: var(--spacing-4);
     padding-right: var(--spacing-4);
   }
-  
+
   .section-spacing {
     padding-top: var(--spacing-8);
     padding-bottom: var(--spacing-8);
