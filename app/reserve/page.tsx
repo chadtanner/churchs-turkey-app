@@ -196,8 +196,9 @@ export default function ReservePage() {
 
                         <div className="flex-stack-mobile flex-row-desktop" style={{ marginBottom: 'var(--spacing-4)' }}>
                             <div className="w-full-mobile" style={{ flex: 1 }}>
-                                <Input
+                                <input
                                     type="text"
+                                    className="input-field"
                                     placeholder="Search by city, state, or zip code..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
