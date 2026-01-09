@@ -19,6 +19,7 @@ export default function ReservePage() {
     const [isLocating, setIsLocating] = useState(false);
     const [loading, setLoading] = useState(true);
     const [nearbyLocations, setNearbyLocations] = useState<Restaurant[]>([]);
+    const [lastConfirmationId, setLastConfirmationId] = useState<string>('');
 
     // Fetch restaurants on mount
     useEffect(() => {
@@ -294,7 +295,10 @@ export default function ReservePage() {
                 <ReservationForm
                     restaurant={selectedRestaurant}
                     onBack={() => setStep('location')}
-                    onComplete={() => setStep('confirmation')}
+                    onComplete={(id) => {
+                        setLastConfirmationId(id);
+                        setStep('confirmation');
+                    }}
                 />
             )}
 
@@ -306,8 +310,24 @@ export default function ReservePage() {
                         <h2 className="text-h2" style={{ marginBottom: 'var(--spacing-4)', color: 'var(--gray-900)' }}>
                             Reservation Complete!
                         </h2>
+                        {lastConfirmationId && (
+                            <div style={{
+                                background: 'var(--gray-50)',
+                                padding: 'var(--spacing-4)',
+                                borderRadius: 'var(--radius)',
+                                marginBottom: 'var(--spacing-6)',
+                                border: '1px solid var(--gray-200)'
+                            }}>
+                                <p style={{ fontSize: '0.875rem', color: 'var(--gray-600)', marginBottom: 'var(--spacing-1)' }}>
+                                    Confirmation Number
+                                </p>
+                                <p style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--gray-900)', fontFamily: 'monospace' }}>
+                                    {lastConfirmationId}
+                                </p>
+                            </div>
+                        )}
                         <p className="text-body" style={{ color: 'var(--gray-600)', marginBottom: 'var(--spacing-6)' }}>
-                            This is a prototype - in production, you would receive a confirmation email with your reservation details.
+                            We have sent an email with your reservation details. Please present your confirmation number when picking up your turkey.
                         </p>
                         <Button variant="primary" onClick={() => {
                             setStep('location');
@@ -330,7 +350,7 @@ function ReservationForm({
 }: {
     restaurant: Restaurant;
     onBack: () => void;
-    onComplete: () => void;
+    onComplete: (confirmationId: string) => void;
 }) {
     const [quantity, setQuantity] = useState(1);
     const [selectedTime, setSelectedTime] = useState('');
@@ -437,7 +457,7 @@ function ReservationForm({
             }
 
             console.log('Reservation created successfully!');
-            onComplete();
+            onComplete(confirmedReservation.confirmationId);
         } catch (error) {
             console.error('Error creating reservation:', error);
             alert('Failed to create reservation. Please try again.');
