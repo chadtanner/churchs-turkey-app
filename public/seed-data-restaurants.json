@@ -1,0 +1,3461 @@
+{
+  "restaurants": [
+    {
+      "restaurantNumber": "1001",
+      "locationId": "100000",
+      "restaurantName": "Church's Texas Chicken - Dallas Downtown",
+      "address": {
+        "street": "2848 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zipCode": "75201",
+        "latitude": 32.7767,
+        "longitude": -96.797,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 7,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 5
+      }
+    },
+    {
+      "restaurantNumber": "1002",
+      "locationId": "100001",
+      "restaurantName": "Church's Texas Chicken - Houston Galleria",
+      "address": {
+        "street": "5523 Pine St",
+        "city": "Houston",
+        "state": "TX",
+        "zipCode": "77056",
+        "latitude": 29.7604,
+        "longitude": -95.3698,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-24",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Temporarily closed",
+      "disabledAt": "2026-01-07T00:00:00",
+      "disabledBy": "admin@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1003",
+      "locationId": "100002",
+      "restaurantName": "Church's Texas Chicken - San Antonio River Walk",
+      "address": {
+        "street": "3072 Broadway St",
+        "city": "San Antonio",
+        "state": "TX",
+        "zipCode": "78205",
+        "latitude": 29.4241,
+        "longitude": -98.4936,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 10,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 2
+      }
+    },
+    {
+      "restaurantNumber": "1004",
+      "locationId": "100003",
+      "restaurantName": "Church's Texas Chicken - Austin South Congress",
+      "address": {
+        "street": "3739 Market St",
+        "city": "Austin",
+        "state": "TX",
+        "zipCode": "78704",
+        "latitude": 30.2672,
+        "longitude": -97.7431,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 7,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 5
+      }
+    },
+    {
+      "restaurantNumber": "1005",
+      "locationId": "100004",
+      "restaurantName": "Church's Texas Chicken - Fort Worth Stockyards",
+      "address": {
+        "street": "5573 Commerce St",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zipCode": "76164",
+        "latitude": 32.7555,
+        "longitude": -97.3308,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 8,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 4
+      }
+    },
+    {
+      "restaurantNumber": "1006",
+      "locationId": "100005",
+      "restaurantName": "Church's Texas Chicken - El Paso West Side",
+      "address": {
+        "street": "3436 Church St",
+        "city": "El Paso",
+        "state": "TX",
+        "zipCode": "79925",
+        "latitude": 31.7619,
+        "longitude": -106.485,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1007",
+      "locationId": "100006",
+      "restaurantName": "Church's Texas Chicken - Arlington Entertainment District",
+      "address": {
+        "street": "7918 Oak St",
+        "city": "Arlington",
+        "state": "TX",
+        "zipCode": "76011",
+        "latitude": 32.7357,
+        "longitude": -97.1081,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1008",
+      "locationId": "100007",
+      "restaurantName": "Church's Texas Chicken - Corpus Christi Bay Area",
+      "address": {
+        "street": "9441 Broadway St",
+        "city": "Corpus Christi",
+        "state": "TX",
+        "zipCode": "78401",
+        "latitude": 27.8006,
+        "longitude": -97.3964,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1009",
+      "locationId": "100008",
+      "restaurantName": "Church's Texas Chicken - Plano Legacy",
+      "address": {
+        "street": "1203 Church St",
+        "city": "Plano",
+        "state": "TX",
+        "zipCode": "75024",
+        "latitude": 33.0198,
+        "longitude": -96.6989,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1010",
+      "locationId": "100009",
+      "restaurantName": "Church's Texas Chicken - Lubbock Tech Terrace",
+      "address": {
+        "street": "9574 Oak St",
+        "city": "Lubbock",
+        "state": "TX",
+        "zipCode": "79409",
+        "latitude": 33.5779,
+        "longitude": -101.8552,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 2,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 10
+      }
+    },
+    {
+      "restaurantNumber": "1011",
+      "locationId": "100010",
+      "restaurantName": "Church's Texas Chicken - Los Angeles Downtown",
+      "address": {
+        "street": "5925 Commerce St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90012",
+        "latitude": 34.0522,
+        "longitude": -118.2437,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1012",
+      "locationId": "100011",
+      "restaurantName": "Church's Texas Chicken - San Diego Gaslamp",
+      "address": {
+        "street": "1940 Main St",
+        "city": "San Diego",
+        "state": "CA",
+        "zipCode": "92101",
+        "latitude": 32.7157,
+        "longitude": -117.1611,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1013",
+      "locationId": "100012",
+      "restaurantName": "Church's Texas Chicken - San Jose Santana Row",
+      "address": {
+        "street": "2244 Commerce St",
+        "city": "San Jose",
+        "state": "CA",
+        "zipCode": "95128",
+        "latitude": 37.3382,
+        "longitude": -121.8863,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 4,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 8
+      }
+    },
+    {
+      "restaurantNumber": "1014",
+      "locationId": "100013",
+      "restaurantName": "Church's Texas Chicken - San Francisco Mission",
+      "address": {
+        "street": "9258 Pine St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipCode": "94110",
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 2,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 10
+      }
+    },
+    {
+      "restaurantNumber": "1015",
+      "locationId": "100014",
+      "restaurantName": "Church's Texas Chicken - Fresno Tower District",
+      "address": {
+        "street": "6154 Pine St",
+        "city": "Fresno",
+        "state": "CA",
+        "zipCode": "93721",
+        "latitude": 36.7378,
+        "longitude": -119.7871,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 4,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 8
+      }
+    },
+    {
+      "restaurantNumber": "1016",
+      "locationId": "100015",
+      "restaurantName": "Church's Texas Chicken - Sacramento Midtown",
+      "address": {
+        "street": "4685 Commerce St",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipCode": "95814",
+        "latitude": 38.5816,
+        "longitude": -121.4944,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1017",
+      "locationId": "100016",
+      "restaurantName": "Church's Texas Chicken - Long Beach Downtown",
+      "address": {
+        "street": "2420 Oak St",
+        "city": "Long Beach",
+        "state": "CA",
+        "zipCode": "90802",
+        "latitude": 33.7701,
+        "longitude": -118.1937,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1018",
+      "locationId": "100017",
+      "restaurantName": "Church's Texas Chicken - Oakland Jack London Square",
+      "address": {
+        "street": "7410 Pine St",
+        "city": "Oakland",
+        "state": "CA",
+        "zipCode": "94607",
+        "latitude": 37.8044,
+        "longitude": -122.2712,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1019",
+      "locationId": "100018",
+      "restaurantName": "Church's Texas Chicken - Miami South Beach",
+      "address": {
+        "street": "6311 Elm St",
+        "city": "Miami",
+        "state": "FL",
+        "zipCode": "33139",
+        "latitude": 25.7617,
+        "longitude": -80.1918,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 4,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 8
+      }
+    },
+    {
+      "restaurantNumber": "1020",
+      "locationId": "100019",
+      "restaurantName": "Church's Texas Chicken - Orlando Downtown",
+      "address": {
+        "street": "9844 Pine St",
+        "city": "Orlando",
+        "state": "FL",
+        "zipCode": "32801",
+        "latitude": 28.5383,
+        "longitude": -81.3792,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1021",
+      "locationId": "100020",
+      "restaurantName": "Church's Texas Chicken - Tampa Ybor City",
+      "address": {
+        "street": "5663 Main St",
+        "city": "Tampa",
+        "state": "FL",
+        "zipCode": "33605",
+        "latitude": 27.9506,
+        "longitude": -82.4572,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 5,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 7
+      }
+    },
+    {
+      "restaurantNumber": "1022",
+      "locationId": "100021",
+      "restaurantName": "Church's Texas Chicken - Jacksonville Riverside",
+      "address": {
+        "street": "186 Main St",
+        "city": "Jacksonville",
+        "state": "FL",
+        "zipCode": "32204",
+        "latitude": 30.3322,
+        "longitude": -81.6557,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1023",
+      "locationId": "100022",
+      "restaurantName": "Church's Texas Chicken - Fort Lauderdale Las Olas",
+      "address": {
+        "street": "9517 Pine St",
+        "city": "Fort Lauderdale",
+        "state": "FL",
+        "zipCode": "33301",
+        "latitude": 26.1224,
+        "longitude": -80.1373,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1024",
+      "locationId": "100023",
+      "restaurantName": "Church's Texas Chicken - Atlanta Midtown",
+      "address": {
+        "street": "3522 Pine St",
+        "city": "Atlanta",
+        "state": "GA",
+        "zipCode": "30308",
+        "latitude": 33.749,
+        "longitude": -84.388,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1025",
+      "locationId": "100024",
+      "restaurantName": "Church's Texas Chicken - Atlanta Buckhead",
+      "address": {
+        "street": "4695 Elm St",
+        "city": "Atlanta",
+        "state": "GA",
+        "zipCode": "30305",
+        "latitude": 33.849,
+        "longitude": -84.3788,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1026",
+      "locationId": "100025",
+      "restaurantName": "Church's Texas Chicken - Savannah Historic District",
+      "address": {
+        "street": "9400 Market St",
+        "city": "Savannah",
+        "state": "GA",
+        "zipCode": "31401",
+        "latitude": 32.0809,
+        "longitude": -81.0912,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1027",
+      "locationId": "100026",
+      "restaurantName": "Church's Texas Chicken - Augusta Downtown",
+      "address": {
+        "street": "8726 Commerce St",
+        "city": "Augusta",
+        "state": "GA",
+        "zipCode": "30901",
+        "latitude": 33.4735,
+        "longitude": -82.0105,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Temporarily closed",
+      "disabledAt": "2026-01-01T00:00:00",
+      "disabledBy": "manager@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1028",
+      "locationId": "100027",
+      "restaurantName": "Church's Texas Chicken - New Orleans French Quarter",
+      "address": {
+        "street": "4792 Broadway St",
+        "city": "New Orleans",
+        "state": "LA",
+        "zipCode": "70116",
+        "latitude": 29.9511,
+        "longitude": -90.0715,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1029",
+      "locationId": "100028",
+      "restaurantName": "Church's Texas Chicken - Baton Rouge Downtown",
+      "address": {
+        "street": "2787 Elm St",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "zipCode": "70801",
+        "latitude": 30.4515,
+        "longitude": -91.1871,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1030",
+      "locationId": "100029",
+      "restaurantName": "Church's Texas Chicken - Shreveport Downtown",
+      "address": {
+        "street": "1853 Commerce St",
+        "city": "Shreveport",
+        "state": "LA",
+        "zipCode": "71101",
+        "latitude": 32.5252,
+        "longitude": -93.7502,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Weather/Emergency",
+      "disabledAt": "2026-01-01T00:00:00",
+      "disabledBy": "admin@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1031",
+      "locationId": "100030",
+      "restaurantName": "Church's Texas Chicken - Nashville Broadway",
+      "address": {
+        "street": "9286 Main St",
+        "city": "Nashville",
+        "state": "TN",
+        "zipCode": "37203",
+        "latitude": 36.1627,
+        "longitude": -86.7816,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1032",
+      "locationId": "100031",
+      "restaurantName": "Church's Texas Chicken - Memphis Beale Street",
+      "address": {
+        "street": "4284 Church St",
+        "city": "Memphis",
+        "state": "TN",
+        "zipCode": "38103",
+        "latitude": 35.1495,
+        "longitude": -90.049,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 5,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 7
+      }
+    },
+    {
+      "restaurantNumber": "1033",
+      "locationId": "100032",
+      "restaurantName": "Church's Texas Chicken - Chicago Loop",
+      "address": {
+        "street": "6463 Commerce St",
+        "city": "Chicago",
+        "state": "IL",
+        "zipCode": "60601",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 10,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 2
+      }
+    },
+    {
+      "restaurantNumber": "1034",
+      "locationId": "100033",
+      "restaurantName": "Church's Texas Chicken - Chicago South Side",
+      "address": {
+        "street": "765 Pine St",
+        "city": "Chicago",
+        "state": "IL",
+        "zipCode": "60619",
+        "latitude": 41.7387,
+        "longitude": -87.6043,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1035",
+      "locationId": "100034",
+      "restaurantName": "Church's Texas Chicken - Charlotte Uptown",
+      "address": {
+        "street": "5173 Broadway St",
+        "city": "Charlotte",
+        "state": "NC",
+        "zipCode": "28202",
+        "latitude": 35.2271,
+        "longitude": -80.8431,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1036",
+      "locationId": "100035",
+      "restaurantName": "Church's Texas Chicken - Raleigh Downtown",
+      "address": {
+        "street": "5326 Church St",
+        "city": "Raleigh",
+        "state": "NC",
+        "zipCode": "27601",
+        "latitude": 35.7796,
+        "longitude": -78.6382,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 3,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 9
+      }
+    },
+    {
+      "restaurantNumber": "1037",
+      "locationId": "100036",
+      "restaurantName": "Church's Texas Chicken - Phoenix Downtown",
+      "address": {
+        "street": "5514 Oak St",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zipCode": "85003",
+        "latitude": 33.4484,
+        "longitude": -112.074,
+        "timezone": "America/Phoenix"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 5,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 7
+      }
+    },
+    {
+      "restaurantNumber": "1038",
+      "locationId": "100037",
+      "restaurantName": "Church's Texas Chicken - Scottsdale Old Town",
+      "address": {
+        "street": "3278 Oak St",
+        "city": "Scottsdale",
+        "state": "AZ",
+        "zipCode": "85251",
+        "latitude": 33.4942,
+        "longitude": -111.9261,
+        "timezone": "America/Phoenix"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1039",
+      "locationId": "100038",
+      "restaurantName": "Church's Texas Chicken - Las Vegas Strip",
+      "address": {
+        "street": "6681 Commerce St",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zipCode": "89109",
+        "latitude": 36.1699,
+        "longitude": -115.1398,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1040",
+      "locationId": "100039",
+      "restaurantName": "Church's Texas Chicken - Detroit Downtown",
+      "address": {
+        "street": "4412 Commerce St",
+        "city": "Detroit",
+        "state": "MI",
+        "zipCode": "48226",
+        "latitude": 42.3314,
+        "longitude": -83.0458,
+        "timezone": "America/Detroit"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-24",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Temporarily closed",
+      "disabledAt": "2026-01-03T00:00:00",
+      "disabledBy": "admin@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1041",
+      "locationId": "100040",
+      "restaurantName": "Church's Texas Chicken - Denver Downtown",
+      "address": {
+        "street": "3078 Commerce St",
+        "city": "Denver",
+        "state": "CO",
+        "zipCode": "80202",
+        "latitude": 39.7392,
+        "longitude": -104.9903,
+        "timezone": "America/Denver"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 6,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 6
+      }
+    },
+    {
+      "restaurantNumber": "1042",
+      "locationId": "100041",
+      "restaurantName": "Church's Texas Chicken - Seattle Capitol Hill",
+      "address": {
+        "street": "5887 Church St",
+        "city": "Seattle",
+        "state": "WA",
+        "zipCode": "98102",
+        "latitude": 47.6062,
+        "longitude": -122.3321,
+        "timezone": "America/Los_Angeles"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Staff shortage",
+      "disabledAt": "2026-01-03T00:00:00",
+      "disabledBy": "admin@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1043",
+      "locationId": "100042",
+      "restaurantName": "Church's Texas Chicken - Philadelphia Center City",
+      "address": {
+        "street": "1791 Elm St",
+        "city": "Philadelphia",
+        "state": "PA",
+        "zipCode": "19102",
+        "latitude": 39.9526,
+        "longitude": -75.1652,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 5,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 7
+      }
+    },
+    {
+      "restaurantNumber": "1044",
+      "locationId": "100043",
+      "restaurantName": "Church's Texas Chicken - Richmond Downtown",
+      "address": {
+        "street": "6517 Broadway St",
+        "city": "Richmond",
+        "state": "VA",
+        "zipCode": "23219",
+        "latitude": 37.5407,
+        "longitude": -77.436,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 11,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 1
+      }
+    },
+    {
+      "restaurantNumber": "1045",
+      "locationId": "100044",
+      "restaurantName": "Church's Texas Chicken - Columbus Short North",
+      "address": {
+        "street": "2122 Elm St",
+        "city": "Columbus",
+        "state": "OH",
+        "zipCode": "43215",
+        "latitude": 39.9612,
+        "longitude": -82.9988,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 10,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 2
+      }
+    },
+    {
+      "restaurantNumber": "1046",
+      "locationId": "100045",
+      "restaurantName": "Church's Texas Chicken - Birmingham Downtown",
+      "address": {
+        "street": "7001 Elm St",
+        "city": "Birmingham",
+        "state": "AL",
+        "zipCode": "35203",
+        "latitude": 33.5207,
+        "longitude": -86.8025,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 0,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 12
+      }
+    },
+    {
+      "restaurantNumber": "1047",
+      "locationId": "100046",
+      "restaurantName": "Church's Texas Chicken - Tulsa Downtown",
+      "address": {
+        "street": "5289 Commerce St",
+        "city": "Tulsa",
+        "state": "OK",
+        "zipCode": "74103",
+        "latitude": 36.154,
+        "longitude": -95.9928,
+        "timezone": "America/Chicago"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Weather/Emergency",
+      "disabledAt": "2026-01-07T00:00:00",
+      "disabledBy": "manager@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1048",
+      "locationId": "100047",
+      "restaurantName": "Church's Texas Chicken - Charleston Historic District",
+      "address": {
+        "street": "3334 Main St",
+        "city": "Charleston",
+        "state": "SC",
+        "zipCode": "29401",
+        "latitude": 32.7765,
+        "longitude": -79.9311,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1049",
+      "locationId": "100048",
+      "restaurantName": "Church's Texas Chicken - Buffalo Downtown",
+      "address": {
+        "street": "2750 Church St",
+        "city": "Buffalo",
+        "state": "NY",
+        "zipCode": "14202",
+        "latitude": 42.8864,
+        "longitude": -78.8784,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": false,
+      "disabledReason": "Weather/Emergency",
+      "disabledAt": "2026-01-02T00:00:00",
+      "disabledBy": "manager@churchstexaschicken.com",
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    },
+    {
+      "restaurantNumber": "1050",
+      "locationId": "100049",
+      "restaurantName": "Church's Texas Chicken - Rochester Downtown",
+      "address": {
+        "street": "9118 Oak St",
+        "city": "Rochester",
+        "state": "NY",
+        "zipCode": "14604",
+        "latitude": 43.1566,
+        "longitude": -77.6088,
+        "timezone": "America/New_York"
+      },
+      "storeHours": {
+        "monday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "tuesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "wednesday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "thursday": {
+          "open": "10:00",
+          "close": "22:00",
+          "closed": false
+        },
+        "friday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "saturday": {
+          "open": "10:00",
+          "close": "23:00",
+          "closed": false
+        },
+        "sunday": {
+          "open": "11:00",
+          "close": "21:00",
+          "closed": false
+        }
+      },
+      "pickupConfig": {
+        "bufferAfterOpen": 30,
+        "bufferBeforeClose": 30,
+        "slotInterval": 30
+      },
+      "pickupDate": "2026-11-25",
+      "turkeyInventory": 12,
+      "reservationLimit": 4,
+      "turkeyPrice": 40.0,
+      "isActive": true,
+      "reservationsEnabled": true,
+      "disabledReason": null,
+      "disabledAt": null,
+      "disabledBy": null,
+      "metadata": {
+        "totalTurkeyCapacity": 12,
+        "turkeysReserved": 0
+      }
+    }
+  ],
+  "systemConfig": {
+    "promotionActive": true,
+    "promotionStartDate": "2025-11-01",
+    "promotionEndDate": "2026-11-25",
+    "emailSimulation": true,
+    "adminEmail": "admin@churchstexaschicken.com"
+  }
+}
