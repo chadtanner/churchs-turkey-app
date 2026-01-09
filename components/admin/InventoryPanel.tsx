@@ -103,9 +103,18 @@ export default function InventoryPanel({
                         fontSize: '1.25rem',
                         fontWeight: 700,
                         color: style.text,
-                        marginBottom: 'var(--spacing-1)'
+                        marginBottom: 'var(--spacing-1)',
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'center',
+                        gap: '0.5ch'
                     }}>
-                        {icon} {title}
+                        <span>{icon} {title.split('(')[0].trim()}</span>
+                        {title.includes('(') && (
+                            <span style={{ fontSize: '1rem', opacity: 0.9 }}>
+                                ({title.split('(')[1]}
+                            </span>
+                        )}
                     </h3>
                     <span style={{
                         fontSize: '0.875rem',

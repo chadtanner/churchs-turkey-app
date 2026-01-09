@@ -193,20 +193,36 @@ export default function ReservationsView({ initialSearchTerm = '' }: Reservation
                 <div key={locationTitle} style={{ marginBottom: 'var(--spacing-8)' }}>
                     <div style={{
                         display: 'flex',
+                        flexWrap: 'wrap',
                         justifyContent: 'space-between',
                         alignItems: 'center',
+                        gap: 'var(--spacing-3)',
                         background: 'var(--gray-200)',
                         padding: 'var(--spacing-3) var(--spacing-4)',
                         borderRadius: 'var(--radius-sm)',
                         marginBottom: 'var(--spacing-3)'
                     }}>
-                        <h4 className="text-h4" style={{ color: 'var(--gray-900)', margin: 0 }}>
-                            {locationTitle} <span style={{ fontWeight: 400, color: 'var(--gray-600)' }}>({locationReservations.length} orders)</span>
-                        </h4>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <h4 className="text-h4" style={{ color: 'var(--gray-900)', margin: 0, lineHeight: 1.3 }}>
+                                {locationTitle.split('(')[0].trim()}
+                            </h4>
+                            <div style={{ fontSize: '0.875rem', color: 'var(--gray-600)', marginTop: '2px' }}>
+                                {/* Extract the ID part that was in the title or just reconstruct it comfortably */}
+                                {/* The key was constructed as `${res.restaurantName} (#${res.locationId})` */}
+                                {/* Let's keep it simple: showing the ID and count on a second line is clearer for mobile */}
+                                #{locationReservations[0]?.locationId} • {locationReservations.length} order{locationReservations.length !== 1 ? 's' : ''}
+                            </div>
+                        </div>
                         <Button
                             variant="secondary"
                             onClick={() => downloadCSV(locationReservations, locationReservations[0]?.locationId || 'location')}
-                            style={{ padding: '0.25rem 0.75rem', height: 'auto', fontSize: '0.875rem' }}
+                            style={{
+                                padding: '0.25rem 0.75rem',
+                                height: 'auto',
+                                fontSize: '0.875rem',
+                                whiteSpace: 'nowrap',
+                                flex: '0 0 auto' // Prevent shrinking
+                            }}
                         >
                             ⬇ Export CSV
                         </Button>
@@ -219,7 +235,7 @@ export default function ReservationsView({ initialSearchTerm = '' }: Reservation
                                     <th style={{ padding: 'var(--spacing-3)' }}>Confirmation</th>
                                     <th style={{ padding: 'var(--spacing-3)' }}>Customer</th>
                                     <th style={{ padding: 'var(--spacing-3)' }}>Contact</th>
-                                    <th style={{ padding: 'var(--spacing-3)' }}>Details</th>
+                                    <th style={{ padding: 'var(--spacing-3)', textAlign: 'center' }}>Reserved</th>
                                     <th style={{ padding: 'var(--spacing-3)' }}>Pickup</th>
                                 </tr>
                             </thead>
@@ -236,16 +252,8 @@ export default function ReservationsView({ initialSearchTerm = '' }: Reservation
                                             <div>{res.customer.email}</div>
                                             <div style={{ color: 'var(--gray-500)', fontSize: '0.75rem' }}>{res.customer.phone}</div>
                                         </td>
-                                        <td style={{ padding: 'var(--spacing-3)' }}>
-                                            <span style={{
-                                                background: 'var(--honey-butter)',
-                                                padding: '2px 8px',
-                                                borderRadius: '12px',
-                                                fontSize: '0.75rem',
-                                                fontWeight: 700
-                                            }}>
-                                                {res.reservation.turkeyQuantity} Turkey{res.reservation.turkeyQuantity > 1 ? 's' : ''}
-                                            </span>
+                                        <td style={{ padding: 'var(--spacing-3)', textAlign: 'center', fontWeight: 600, fontSize: '1rem' }}>
+                                            {res.reservation.turkeyQuantity}
                                         </td>
                                         <td style={{ padding: 'var(--spacing-3)' }}>
                                             <div>{formatPickupDate(res.reservation.pickupDate)}</div>
