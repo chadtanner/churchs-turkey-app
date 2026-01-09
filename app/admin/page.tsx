@@ -3,10 +3,9 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import AdminLocationSearch from '@/components/admin/LocationSearch';
-import InventoryPanel from '@/components/admin/InventoryPanel';
 import { Restaurant, LocationStatus, CategorizedLocations } from '@/lib/types';
-import { formatPrice } from '@/lib/utils';
+import PerformanceView from './components/PerformanceView';
+import ReservationsView from './components/ReservationsView';
 
 function categorizeLocations(restaurants: Restaurant[]): CategorizedLocations {
     const categorized: CategorizedLocations = {
@@ -65,6 +64,7 @@ export default function AdminDashboard() {
         other: []
     });
     const [loading, setLoading] = useState(true);
+    const [activeTab, setActiveTab] = useState<'performance' | 'reservations'>('performance');
 
     useEffect(() => {
         async function fetchRestaurants() {
@@ -105,11 +105,6 @@ export default function AdminDashboard() {
         );
     }
 
-    const totalTurkeys = restaurants.reduce((sum, r) => sum + (r.metadata?.totalTurkeyCapacity || 12), 0);
-    const totalReserved = restaurants.reduce((sum, r) => sum + (r.metadata?.turkeysReserved || 0), 0);
-    const totalAvailable = restaurants.reduce((sum, r) => sum + r.turkeyInventory, 0);
-    const totalRevenue = totalReserved * 40;
-
     return (
         <div style={{ background: 'var(--gray-50)', minHeight: '100vh' }}>
             <div className="container section-spacing">
@@ -120,138 +115,53 @@ export default function AdminDashboard() {
                     Admin Dashboard
                 </h1>
 
-                {/* Summary Cards */}
+                {/* Tab Navigation */}
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                    gap: 'var(--spacing-6)',
-                    marginBottom: 'var(--spacing-8)'
+                    display: 'flex',
+                    gap: 'var(--spacing-1)',
+                    marginBottom: 'var(--spacing-8)',
+                    borderBottom: '2px solid var(--gray-200)'
                 }}>
-                    <div className="card" style={{ textAlign: 'center' }}>
-                        <div style={{
-                            fontSize: '2.5rem',
-                            fontWeight: 700,
-                            color: 'var(--og-heat)',
-                            marginBottom: 'var(--spacing-2)'
-                        }}>
-                            {totalAvailable}
-                        </div>
-                        <div style={{
-                            fontSize: '0.875rem',
-                            color: 'var(--gray-600)',
-                            fontWeight: 500
-                        }}>
-                            Turkeys Available
-                        </div>
-                    </div>
-
-                    <div className="card" style={{ textAlign: 'center' }}>
-                        <div style={{
-                            fontSize: '2.5rem',
-                            fontWeight: 700,
-                            color: 'var(--jalapeno)',
-                            marginBottom: 'var(--spacing-2)'
-                        }}>
-                            {totalReserved}
-                        </div>
-                        <div style={{
-                            fontSize: '0.875rem',
-                            color: 'var(--gray-600)',
-                            fontWeight: 500
-                        }}>
-                            Turkeys Reserved
-                        </div>
-                    </div>
-
-                    <div className="card" style={{ textAlign: 'center' }}>
-                        <div style={{
-                            fontSize: '2.5rem',
-                            fontWeight: 700,
-                            color: 'var(--honey-butter)',
-                            marginBottom: 'var(--spacing-2)'
-                        }}>
-                            {formatPrice(totalRevenue, false)}
-                        </div>
-                        <div style={{
-                            fontSize: '0.875rem',
-                            color: 'var(--gray-600)',
-                            fontWeight: 500
-                        }}>
-                            Total Revenue (Pre-Tax)
-                        </div>
-                    </div>
-
-                    <div className="card" style={{ textAlign: 'center' }}>
-                        <div style={{
-                            fontSize: '2.5rem',
-                            fontWeight: 700,
-                            color: 'var(--h2o)',
-                            marginBottom: 'var(--spacing-2)'
-                        }}>
-                            {categorized.soldOut.length}
-                        </div>
-                        <div style={{
-                            fontSize: '0.875rem',
-                            color: 'var(--gray-600)',
-                            fontWeight: 500
-                        }}>
-                            Locations Sold Out
-                        </div>
-                    </div>
+                    <button
+                        onClick={() => setActiveTab('performance')}
+                        style={{
+                            padding: 'var(--spacing-4) var(--spacing-6)',
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: activeTab === 'performance' ? '3px solid var(--honey-butter)' : '3px solid transparent',
+                            color: activeTab === 'performance' ? 'var(--gray-900)' : 'var(--gray-500)',
+                            fontWeight: 600,
+                            fontSize: '1.125rem',
+                            cursor: 'pointer',
+                            marginBottom: '-2px' // Overlap border
+                        }}
+                    >
+                        Performance
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('reservations')}
+                        style={{
+                            padding: 'var(--spacing-4) var(--spacing-6)',
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: activeTab === 'reservations' ? '3px solid var(--honey-butter)' : '3px solid transparent',
+                            color: activeTab === 'reservations' ? 'var(--gray-900)' : 'var(--gray-500)',
+                            fontWeight: 600,
+                            fontSize: '1.125rem',
+                            cursor: 'pointer',
+                            marginBottom: '-2px'
+                        }}
+                    >
+                        Reservations
+                    </button>
                 </div>
 
-                {/* Location Search */}
-                <AdminLocationSearch restaurants={restaurants} />
-
-                {/* Inventory Status Panels */}
-                <div>
-                    <h2 className="text-h2" style={{
-                        marginBottom: 'var(--spacing-6)',
-                        color: 'var(--gray-900)'
-                    }}>
-                        Inventory Status
-                    </h2>
-
-                    <InventoryPanel
-                        title="NO RESERVATIONS (0%)"
-                        icon="🔴"
-                        color="red"
-                        locations={categorized.noReservations}
-                        type="no-reservations"
-                    />
-
-                    <InventoryPanel
-                        title="LOW RESERVATIONS (1-49%)"
-                        icon="🔵"
-                        color="blue"
-                        locations={categorized.lowReservations}
-                        type="low"
-                    />
-
-                    <InventoryPanel
-                        title="HALF RESERVED (50-74%)"
-                        icon="🟡"
-                        color="yellow"
-                        locations={categorized.halfReserved}
-                        type="half"
-                    />
-
-                    <InventoryPanel
-                        title="THREE-QUARTERS RESERVED (75-99%)"
-                        icon="🟠"
-                        color="orange"
-                        locations={categorized.threeQuartersReserved}
-                        type="three-quarters"
-                    />
-
-                    <InventoryPanel
-                        title="SOLD OUT (100%)"
-                        icon="🟢"
-                        color="green"
-                        locations={categorized.soldOut}
-                        type="sold-out"
-                    />
-                </div>
+                {/* Tab Content */}
+                {activeTab === 'performance' ? (
+                    <PerformanceView restaurants={restaurants} categorized={categorized} />
+                ) : (
+                    <ReservationsView />
+                )}
             </div>
         </div>
     );

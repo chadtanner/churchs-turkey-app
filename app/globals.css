@@ -387,20 +387,30 @@ a {
 /* Mobile Responsive Overrides */
 @media (max-width: 768px) {
   .text-display {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    /* Was 2.5rem */
   }
 
   .text-h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    /* Was 2rem */
+    line-height: 1.2;
+    white-space: normal !important;
+    /* Allow wrapping */
   }
 
   .text-h2 {
     font-size: 1.5rem;
   }
 
+  .text-h3 {
+    font-size: 1.25rem;
+  }
+
   .container {
-    padding-left: var(--spacing-4);
-    padding-right: var(--spacing-4);
+    padding-left: var(--spacing-6);
+    /* Increase padding to prevent edge touching */
+    padding-right: var(--spacing-6);
   }
 
   .section-spacing {

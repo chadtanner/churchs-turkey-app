@@ -49,8 +49,8 @@ export default function Home() {
                                 Limited Time Offer
                             </div>
 
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 700, lineHeight: 1.2, margin: 0, color: 'var(--gray-900)', whiteSpace: 'nowrap' }}>
-                                <em>Church's</em><span style={{ fontWeight: 300, fontSize: '1.5rem', verticalAlign: 'super' }}>®</span> Smoked Turkey Is Here!
+                            <h1 className="text-h1" style={{ fontWeight: 700, margin: 0, color: 'var(--gray-900)' }}>
+                                <em>Church's</em><span style={{ fontWeight: 300, fontSize: '0.6em', verticalAlign: 'super' }}>®</span> Smoked Turkey Is Here!
                             </h1>
 
                             <p style={{ fontSize: '1.75rem', color: 'var(--gray-600)', fontWeight: 500, margin: 0 }}>
