@@ -245,28 +245,49 @@ export default function AdminLocationSearch({
                                             <span>Pickup: {restaurant.pickupDate}</span>
 
                                             {onSeeReservations && (
-                                                <button
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        onSeeReservations(restaurant.locationId);
-                                                    }}
-                                                    style={{
-                                                        marginLeft: 'auto',
-                                                        background: 'var(--gray-900)',
-                                                        color: 'white',
-                                                        border: 'none',
-                                                        borderRadius: 'var(--radius-sm)',
-                                                        padding: '0.25rem 0.75rem',
-                                                        fontSize: '0.75rem',
-                                                        fontWeight: 600,
-                                                        cursor: 'pointer',
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        gap: '4px'
-                                                    }}
-                                                >
-                                                    See Reservations →
-                                                </button>
+                                                (restaurant.metadata?.turkeysReserved || 0) > 0 ? (
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onSeeReservations(restaurant.locationId);
+                                                        }}
+                                                        style={{
+                                                            marginLeft: 'auto',
+                                                            background: 'var(--gray-900)',
+                                                            color: 'white',
+                                                            border: 'none',
+                                                            borderRadius: 'var(--radius-sm)',
+                                                            padding: '0.25rem 0.75rem',
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            cursor: 'pointer',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            gap: '4px'
+                                                        }}
+                                                    >
+                                                        See Reservations →
+                                                    </button>
+                                                ) : (
+                                                    <button
+                                                        disabled
+                                                        style={{
+                                                            marginLeft: 'auto',
+                                                            background: 'var(--gray-200)',
+                                                            color: 'var(--gray-500)',
+                                                            border: 'none',
+                                                            borderRadius: 'var(--radius-sm)',
+                                                            padding: '0.25rem 0.75rem',
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 600,
+                                                            cursor: 'not-allowed',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                        }}
+                                                    >
+                                                        No Reservations
+                                                    </button>
+                                                )
                                             )}
                                         </div>
                                     </div>

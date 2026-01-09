@@ -167,6 +167,12 @@ export default function InventoryPanel({
                                         textAlign: 'left',
                                         fontWeight: 600,
                                         color: 'var(--gray-700)'
+                                    }}>ID</th>
+                                    <th style={{
+                                        padding: 'var(--spacing-3)',
+                                        textAlign: 'left',
+                                        fontWeight: 600,
+                                        color: 'var(--gray-700)'
                                     }}>Location</th>
                                     <th style={{
                                         padding: 'var(--spacing-3)',
@@ -244,6 +250,14 @@ export default function InventoryPanel({
                                             borderBottom: '1px solid var(--gray-200)'
                                         }}
                                     >
+                                        <td style={{
+                                            padding: 'var(--spacing-3)',
+                                            color: 'var(--gray-600)',
+                                            fontFamily: 'monospace',
+                                            fontSize: '0.8125rem'
+                                        }}>
+                                            {loc.location.locationId}
+                                        </td>
                                         <td style={{
                                             padding: 'var(--spacing-3)',
                                             fontWeight: 500,
