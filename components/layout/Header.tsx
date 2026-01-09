@@ -15,7 +15,9 @@ export default function Header() {
             <div className="container" style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: 'var(--spacing-4)'
             }}>
                 <Link href="/" style={{
                     display: 'flex',

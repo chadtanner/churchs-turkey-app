@@ -343,7 +343,48 @@ a {
   padding-bottom: var(--spacing-16);
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Utilities */
+.grid-stack-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.flex-stack-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.w-full-mobile {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .flex-row-desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .flex-row-desktop-start {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .w-auto-desktop {
+    width: auto;
+  }
+}
+
+/* Mobile Responsive Overrides */
 @media (max-width: 768px) {
   .text-display {
     font-size: 2.5rem;

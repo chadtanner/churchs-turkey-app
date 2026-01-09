@@ -8,10 +8,7 @@ export default function Home() {
             {/* Hero Product Section */}
             <section style={{ background: 'var(--gray-50)', padding: 'var(--spacing-8) 0' }}>
                 <div className="container">
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: 'var(--spacing-8)',
+                    <div className="grid-stack-mobile grid-2-cols" style={{
                         alignItems: 'start'
                     }}>
                         {/* Left: Image */}
@@ -177,10 +174,8 @@ export default function Home() {
                         How It Works
                     </h2>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                        gap: 'var(--spacing-8)'
+                    <div className="grid-stack-mobile" style={{
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))'
                     }}>
                         {[
                             {
@@ -241,11 +236,7 @@ export default function Home() {
                         Why Choose Our Smoked Turkey?
                     </h2>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(4, 1fr)',
-                        gap: 'var(--spacing-6)'
-                    }}>
+                    <div className="grid-stack-mobile grid-4-cols">
                         {[
                             {
                                 icon: '🔥',

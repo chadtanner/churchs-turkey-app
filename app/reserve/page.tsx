@@ -194,8 +194,8 @@ export default function ReservePage() {
                             Find Your Location
                         </h2>
 
-                        <div style={{ display: 'flex', gap: 'var(--spacing-3)', marginBottom: 'var(--spacing-4)' }}>
-                            <div style={{ flex: 1 }}>
+                        <div className="flex-stack-mobile flex-row-desktop" style={{ marginBottom: 'var(--spacing-4)' }}>
+                            <div className="w-full-mobile" style={{ flex: 1 }}>
                                 <Input
                                     type="text"
                                     placeholder="Search by city, state, or zip code..."
@@ -207,6 +207,7 @@ export default function ReservePage() {
                                 variant="secondary"
                                 onClick={handleUseLocation}
                                 disabled={isLocating}
+                                className="w-full-mobile w-auto-desktop"
                                 style={{ whiteSpace: 'nowrap' }}
                             >
                                 {isLocating ? 'Locating...' : '📍 Use my location'}
