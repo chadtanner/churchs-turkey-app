@@ -128,7 +128,9 @@ export function isValidPhone(phone: string): boolean {
  * Format date for display
  */
 export function formatPickupDate(dateString: string): string {
-    const date = new Date(dateString);
+    // Append T12:00:00 to force noon local time, avoiding timezone shifts
+    // e.g. "2026-11-25" -> "2026-11-25T12:00:00"
+    const date = new Date(`${dateString}T12:00:00`);
     return format(date, 'EEEE, MMMM d, yyyy');
 }
 

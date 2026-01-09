@@ -349,7 +349,7 @@ function ReservationForm({
 
         try {
             // Create reservation and update inventory in a transaction
-            await runTransaction(db, async (transaction) => {
+            const confirmedReservation = await runTransaction(db, async (transaction) => {
                 // Get restaurant document
                 const restaurantRef = doc(db, 'restaurants', restaurant.restaurantNumber);
                 const restaurantDoc = await transaction.get(restaurantRef);
@@ -405,7 +405,31 @@ function ReservationForm({
                     'metadata.turkeysReserved': (restaurantData.metadata?.turkeysReserved || 0) + quantity,
                     updatedAt: new Date()
                 });
+
+                return reservationData;
             });
+
+            // Send Confirmation Email
+            try {
+                await fetch('/api/email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        reservation: {
+                            customerName: `${confirmedReservation.customer.firstName} ${confirmedReservation.customer.lastName}`,
+                            customerEmail: confirmedReservation.customer.email,
+                            confirmationId: confirmedReservation.confirmationId,
+                            quantity: confirmedReservation.reservation.turkeyQuantity,
+                            totalAmount: confirmedReservation.reservation.turkeyQuantity * restaurant.turkeyPrice,
+                            pickupTime: confirmedReservation.reservation.pickupTime
+                        },
+                        restaurant: restaurant
+                    })
+                });
+            } catch (emailError) {
+                console.error('Failed to send confirmation email:', emailError);
+                // We don't block the UI success state if email fails
+            }
 
             console.log('Reservation created successfully!');
             onComplete();

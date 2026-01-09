@@ -27,6 +27,7 @@ export default function BulkUpdatePage() {
                     await updateDoc(restaurantRef, {
                         reservationLimit: 2,
                         turkeyPrice: 40,
+                        pickupDate: "2026-11-25",
                         updatedAt: new Date()
                     });
                     updated++;
@@ -41,7 +42,8 @@ export default function BulkUpdatePage() {
                 `Errors: ${errors}\n\n` +
                 `Changes applied:\n` +
                 `- Reservation Limit: 2 turkeys per order\n` +
-                `- Turkey Price: $40.00`);
+                `- Turkey Price: $40.00\n` +
+                `- Pickup Date: 2026-11-25`);
         } catch (error) {
             console.error('Bulk update error:', error);
             setResult(`❌ Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -73,6 +75,7 @@ export default function BulkUpdatePage() {
                     }}>
                         <li><strong>Reservation Limit:</strong> 2 turkeys per order</li>
                         <li><strong>Turkey Price:</strong> $40.00</li>
+                        <li><strong>Pickup Date:</strong> 11/25/2026</li>
                     </ul>
 
                     <Button
