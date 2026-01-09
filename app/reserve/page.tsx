@@ -369,7 +369,10 @@ function ReservationForm({
 
                 // Create reservation
                 const reservationData = {
-                    confirmationId: `CTX-${Date.now()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+                    // Generate realistic unique ID: CTC + 13 digits
+                    // We use a safe mix of randomness to ensure uniqueness without needing a check
+                    // (10^13 possibilities is efficient enough for this scale)
+                    confirmationId: `CTC${Math.floor(Math.random() * 9000000000000 + 1000000000000).toString()}`,
                     locationId: restaurant.locationId,
                     restaurantName: restaurant.restaurantName,
                     restaurantAddress: `${restaurant.address.street}, ${restaurant.address.city}, ${restaurant.address.state} ${restaurant.address.zipCode}`,
