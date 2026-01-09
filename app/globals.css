@@ -186,6 +186,8 @@ a {
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
+  height: 3rem;
+  line-height: 1.5;
 }
 
 .btn-primary {
@@ -241,6 +243,8 @@ a {
   border-radius: var(--radius);
   transition: all 0.2s ease;
   outline: none;
+  height: 3rem;
+  line-height: 1.5;
 }
 
 .input-field:focus {

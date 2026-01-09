@@ -16,7 +16,9 @@ export default function ReservePage() {
     const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
+    const [isLocating, setIsLocating] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [nearbyLocations, setNearbyLocations] = useState<Restaurant[]>([]);
 
     // Fetch restaurants on mount
     useEffect(() => {
@@ -49,7 +51,7 @@ export default function ReservePage() {
         fetchRestaurants();
     }, []);
 
-    // Request geolocation
+    // Request geolocation (auto-detect)
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -60,38 +62,102 @@ export default function ReservePage() {
                     });
                 },
                 (error) => {
-                    console.log('Geolocation not available:', error);
+                    // Fail silently for auto-detect, user can click button to retry
+                    console.log('Auto-geolocation not available:', error);
                 }
             );
         }
     }, []);
 
-    // Filter restaurants by search
-    useEffect(() => {
-        if (!searchQuery.trim()) {
-            setFilteredRestaurants(restaurants);
+    const handleUseLocation = () => {
+        if (!navigator.geolocation) {
+            alert('Geolocation is not supported by your browser');
             return;
         }
 
-        const query = searchQuery.toLowerCase();
-        const filtered = restaurants.filter(r =>
-            r.address.city.toLowerCase().includes(query) ||
-            r.address.state.toLowerCase().includes(query) ||
-            r.address.zipCode.includes(query) ||
-            r.restaurantName.toLowerCase().includes(query)
+        setIsLocating(true);
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                setUserLocation({
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                });
+                setIsLocating(false);
+                setSearchQuery(''); // Clear manual search when using location
+            },
+            (error) => {
+                console.error('Geolocation error:', error);
+                let errorMessage = 'Unable to get your location. Please try searching by city or zip code.';
+                if (error.code === 1) { // PERMISSION_DENIED
+                    errorMessage = 'Location access denied. Please enable location services for this site or search manually.';
+                }
+                alert(errorMessage);
+                setIsLocating(false);
+            }
         );
+    };
 
-        setFilteredRestaurants(filtered);
-    }, [searchQuery, restaurants]);
+    // Filter and Sort restaurants
+    useEffect(() => {
+        let results = [...restaurants];
 
-    // Sort by distance if user location available
-    const sortedRestaurants = userLocation
-        ? [...filteredRestaurants].sort((a, b) => {
-            const distA = calculateDistance(userLocation.lat, userLocation.lon, a.address.latitude, a.address.longitude);
-            const distB = calculateDistance(userLocation.lat, userLocation.lon, b.address.latitude, b.address.longitude);
-            return distA - distB;
-        })
-        : filteredRestaurants;
+        // 1. Filter by Search Query (if exists)
+        if (searchQuery.trim()) {
+            const query = searchQuery.toLowerCase();
+            results = results.filter(r =>
+                r.address.city.toLowerCase().includes(query) ||
+                r.address.state.toLowerCase().includes(query) ||
+                r.address.zipCode.includes(query) ||
+                r.restaurantName.toLowerCase().includes(query)
+            );
+
+            // If searching, we don't enforce distance limit, but we do sort by distance if location available
+            if (userLocation) {
+                results.sort((a, b) => {
+                    const distA = calculateDistance(userLocation.lat, userLocation.lon, a.address.latitude, a.address.longitude);
+                    const distB = calculateDistance(userLocation.lat, userLocation.lon, b.address.latitude, b.address.longitude);
+                    return distA - distB;
+                });
+            }
+        }
+        // 2. Filter by Location (if available and no search query)
+        else if (userLocation) {
+            // Calculate distance for all
+            const withDistance = results.map(r => ({
+                ...r,
+                distance: calculateDistance(userLocation.lat, userLocation.lon, r.address.latitude, r.address.longitude)
+            }));
+
+            // Sort by distance
+            withDistance.sort((a, b) => a.distance - b.distance);
+
+            // Filter to 50 miles
+            const nearby = withDistance.filter(r => r.distance <= 50);
+
+            if (nearby.length > 0) {
+                results = nearby;
+            } else {
+                // FALLBACK: If nothing within 50 miles, return top 5 closest
+                // We keep results as is (sorted by distance), effectively showing closest
+                // But we might want to communicate this to the user in the UI
+            }
+
+            // Map back to Restaurant type (remove extra distance prop if we added it, 
+            // though keeping it effectively just sorts the original array if we used map logic differently)
+            // Actually, simplified sorting on the original array is easier:
+            results.sort((a, b) => {
+                const distA = calculateDistance(userLocation.lat, userLocation.lon, a.address.latitude, a.address.longitude);
+                const distB = calculateDistance(userLocation.lat, userLocation.lon, b.address.latitude, b.address.longitude);
+                return distA - distB;
+            });
+        }
+
+        setFilteredRestaurants(results);
+    }, [searchQuery, userLocation, restaurants]);
+
+    // Derived state for display logic
+    const showNearbyFallback = userLocation && !searchQuery && filteredRestaurants.length > 0 &&
+        calculateDistance(userLocation.lat, userLocation.lon, filteredRestaurants[0].address.latitude, filteredRestaurants[0].address.longitude) > 50;
 
     const handleSelectLocation = (restaurant: Restaurant) => {
         setSelectedRestaurant(restaurant);
@@ -128,29 +194,55 @@ export default function ReservePage() {
                             Find Your Location
                         </h2>
 
-                        <Input
-                            type="text"
-                            placeholder="Search by city, state, or zip code..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
+                        <div style={{ display: 'flex', gap: 'var(--spacing-3)', marginBottom: 'var(--spacing-4)' }}>
+                            <div style={{ flex: 1 }}>
+                                <Input
+                                    type="text"
+                                    placeholder="Search by city, state, or zip code..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                            </div>
+                            <Button
+                                variant="secondary"
+                                onClick={handleUseLocation}
+                                disabled={isLocating}
+                                style={{ whiteSpace: 'nowrap' }}
+                            >
+                                {isLocating ? 'Locating...' : '📍 Use my location'}
+                            </Button>
+                        </div>
 
                         {userLocation && (
-                            <p style={{ fontSize: '0.875rem', color: 'var(--gray-600)', marginTop: 'var(--spacing-2)' }}>
-                                📍 Showing locations sorted by distance from you
-                            </p>
+                            <div style={{
+                                padding: 'var(--spacing-3)',
+                                background: 'var(--gray-100)',
+                                borderRadius: 'var(--radius)',
+                                fontSize: '0.875rem',
+                                color: 'var(--gray-700)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 'var(--spacing-2)'
+                            }}>
+                                <span>📍 Showing locations near you</span>
+                                {showNearbyFallback && (
+                                    <span style={{ color: 'var(--warning)', fontWeight: 500 }}>
+                                        (No locations within 50 miles. Showing closest options.)
+                                    </span>
+                                )}
+                            </div>
                         )}
                     </Card>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-4)' }}>
-                        {sortedRestaurants.length === 0 ? (
+                        {filteredRestaurants.length === 0 ? (
                             <Card style={{ textAlign: 'center', padding: 'var(--spacing-8)' }}>
                                 <p className="text-body" style={{ color: 'var(--gray-600)' }}>
                                     No locations found. Try a different search term.
                                 </p>
                             </Card>
                         ) : (
-                            sortedRestaurants.slice(0, 10).map((restaurant) => {
+                            filteredRestaurants.slice(0, 10).map((restaurant) => {
                                 const distance = userLocation
                                     ? calculateDistance(userLocation.lat, userLocation.lon, restaurant.address.latitude, restaurant.address.longitude)
                                     : null;
