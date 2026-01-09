@@ -18,7 +18,7 @@ export default function InventoryPanel({
     locations,
     type
 }: InventoryPanelProps) {
-    const [isExpanded, setIsExpanded] = useState(true);
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const colorStyles = {
         'no-reservations': {
