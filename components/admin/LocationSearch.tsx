@@ -119,7 +119,7 @@ export default function AdminLocationSearch({
                 color: 'var(--gray-500)',
                 marginTop: 'var(--spacing-1)'
             }}>
-                Examples: "100000" (location ID), "TX" (state), "Dallas" (city)
+                Examples: "100000" (location ID), "TX" (state), "Dallas" (city), "Broadway" (name)
             </div>
 
             {isSearching && (
