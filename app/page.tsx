@@ -114,7 +114,7 @@ export default function Home() {
 
                             <Link href="/reserve" style={{ textDecoration: 'none' }}>
                                 <Button variant="primary" size="lg" fullWidth>
-                                    Make Reservation
+                                    Reserve A Turkey
                                 </Button>
                             </Link>
 
